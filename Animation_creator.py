@@ -1,5 +1,5 @@
 import pygame
-from pygame.locals import MOUSEBUTTONDOWN, KEYDOWN, K_ESCAPE, K_x, K_PLUS, K_MINUS
+from pygame.locals import MOUSEBUTTONDOWN, KEYDOWN, K_ESCAPE, K_x, K_KP_PLUS, K_KP_MINUS
 from Complexe import Complexe
 from Mandelbrot import is_in_mandelbrot
 
@@ -54,10 +54,10 @@ class Animation():
                     self.on = False
                 elif e.key == K_x:
                     self.take_screenshot()
-                elif e.key == K_PLUS:
+                elif e.key == K_KP_PLUS:
                     self.zoom *= 0.1
                     self.reset_screen()
-                elif e.key == K_MINUS:
+                elif e.key == K_KP_MINUS:
                     self.zoom *= 2
                     self.reset_screen()
 
